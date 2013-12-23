@@ -2,6 +2,17 @@ namespace :bower do
   desc "Install bootstrap stuff"
   task :bootstrap do
     system('bower install bootstrap')
+    
+    puts "You will need to add the following to the app/assets/javascripts/application.js:"
+    puts "\t //= require bootstrap/dist/js/bootstrap"
+    puts "You will need to add the following to the app/assets/stylesheets/application.css file with:"
+    puts "\t *= require bootstrap/dist/css/bootstrap"
+  end
+  
+  desc "Remove all contensts of bower_components and public/assets"
+  task :reset => :environment do
+    system("rm -r #{Rails.root.join('vendor/assets/bower_components/')}")
+    system("rm -r #{Rails.root.join('public/assets/')}")
   end
   
   desc 'Fix asset paths (auto run as part of assets)'
