@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Bower::Tools::VERSION
   spec.authors       = ["Will Fisher"]
   spec.email         = ["will@teknofire.net"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{Tools to help integrate bower stuff in rails}
+  spec.summary       = %q{Tools to help integrate bower stuff in rails}
   spec.homepage      = ""
   spec.license       = "MIT"
 
