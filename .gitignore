@@ -15,3 +15,5 @@ spec/reports
 test/tmp
 test/version_tmp
 tmp
+example/public/assets
+example/vendor/assets/bower_components
