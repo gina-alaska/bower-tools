@@ -4,7 +4,7 @@ namespace :bower do
     system('bower install bootstrap')
   end
   
-  desc 'Fix asset paths'
+  desc 'Fix asset paths (auto run as part of assets)'
   task :resolve_asset_paths do
     # Resolve relative paths in CSS
     Dir['vendor/assets/bower_components/**/*.css'].each do |filename|
