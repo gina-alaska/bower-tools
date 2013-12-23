@@ -1,12 +1,12 @@
 # Bower::Tools
 
-TODO: Write a gem description
+Adds some rake tasks and a generator for configuring a rails application to work with the bower js installer.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'bower-tools'
+    gem 'bower-tools', git: 'https://github.com/gina-alaska/bower-tools'
 
 And then execute:
 
@@ -18,7 +18,17 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Install the .bowerrc file, this will configure bower to install all libs into the vendor/assets/bower_components dir
+
+    rails g bower:tools:install
+
+Now just use bower as you normally would, no other changes required
+
+    bower install bootstrap
+
+## Rake tasks
+
+* `rake bower:resolve_asset_path` will modified and rename css files to use the `asset_path` helper method.  It is automatically set to run before doing an asset:precompile task.
 
 ## Contributing
 
