@@ -1,6 +1,9 @@
 namespace :bower do
   desc "Install bowerrc file"
-  task :install do
-    puts 'Testing'
+  task :install => :environment do
+    if File.exists?(Rails.root.join('.bowerrc'))
+      puts ".bowerrc file already exists"
+      exit
+    end    
   end
 end
